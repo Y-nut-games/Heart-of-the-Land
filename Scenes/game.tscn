@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b2v8f0nxl6nj5"]
+
+[ext_resource type="Script" uid="uid://cwpaxse46wxna" path="res://Scenes/GameManager.gd" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://dphit3o1408f0" path="res://Scenes/tile_generator.gd" id="2_qxrlw"]
+
+[node name="Game" type="Node2D" unique_id=2118489203]
+script = ExtResource("1_ebmjs")
+
+[node name="tileGenerator" type="Node2D" parent="." unique_id=1219724885]
+script = ExtResource("2_qxrlw")

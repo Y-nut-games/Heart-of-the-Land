@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://currdki8d4ycv"]
+
+[ext_resource type="Texture2D" uid="uid://deipa3i87o1r" path="res://Assets/Tiles/tiles.png" id="1_2bj67"]
+[ext_resource type="Script" uid="uid://c6whs2taxlwfj" path="res://Scenes/walls.gd" id="1_cxhnf"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cxhnf"]
+texture = ExtResource("1_2bj67")
+texture_region_size = Vector2i(64, 64)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_vbfun"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_cxhnf")
+
+[node name="Walls" type="Node2D" unique_id=1108133226]
+script = ExtResource("1_cxhnf")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=860103151]
+tile_set = SubResource("TileSet_vbfun")
+rendering_quadrant_size = 6
+format = 2

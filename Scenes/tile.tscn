@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://yacbplqe45qj"]
+
+[ext_resource type="Script" uid="uid://cxgwyisufyxur" path="res://Scripts/tile.gd" id="1_xsjyq"]
+[ext_resource type="Texture2D" uid="uid://deipa3i87o1r" path="res://Assets/Tiles/tiles.png" id="2_rvq8p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbfun"]
+size = Vector2(64, 64)
+
+[node name="Tile" type="Node2D" unique_id=1817091599]
+script = ExtResource("1_xsjyq")
+
+[node name="Debug" type="Label" parent="." unique_id=1368269543]
+offset_left = -20.0
+offset_top = -14.0
+offset_right = 20.0
+offset_bottom = 9.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2108419701]
+texture = ExtResource("2_rvq8p")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 64)
+
+[node name="ObjectContainer" type="Node" parent="." unique_id=161839905]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372122163]
+shape = SubResource("RectangleShape2D_vbfun")

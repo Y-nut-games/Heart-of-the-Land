@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://by8dx56mp3b1d"]
+
+[ext_resource type="Texture2D" uid="uid://hgd5bpu6awwg" path="res://Assets/Entities/charlieTheCapybaraAnimationSheet.png" id="1_452e1"]
+[ext_resource type="Script" uid="uid://cpi8et8rhsvco" path="res://Scripts/heart.gd" id="1_v4aiu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4aiu"]
+atlas = ExtResource("1_452e1")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgxw8"]
+atlas = ExtResource("1_452e1")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rycqq"]
+atlas = ExtResource("1_452e1")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wkup"]
+atlas = ExtResource("1_452e1")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t623b"]
+atlas = ExtResource("1_452e1")
+region = Rect2(256, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4obt7"]
+atlas = ExtResource("1_452e1")
+region = Rect2(320, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atbr1"]
+atlas = ExtResource("1_452e1")
+region = Rect2(384, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhnby"]
+atlas = ExtResource("1_452e1")
+region = Rect2(448, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gdh3h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4aiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgxw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rycqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wkup")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t623b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4obt7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atbr1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhnby")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Heart" type="Node2D" unique_id=1232983897]
+script = ExtResource("1_v4aiu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1935445019]
+sprite_frames = SubResource("SpriteFrames_gdh3h")
+autoplay = "default"
