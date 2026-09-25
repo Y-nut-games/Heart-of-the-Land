@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ho3wd8cuw65"]
+
+[ext_resource type="Script" uid="uid://c47efbe60e3hw" path="res://boardManager.gd" id="1_uh3b8"]
+[ext_resource type="Texture2D" uid="uid://deipa3i87o1r" path="res://Assets/Tiles/tiles.png" id="2_shhme"]
+[ext_resource type="Script" uid="uid://dphit3o1408f0" path="res://Scripts/tile_generator.gd" id="3_shhme"]
+[ext_resource type="PackedScene" uid="uid://cufxbnny6qoje" path="res://Scenes/grid.tscn" id="4_s4i1f"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bh37u"]
+texture = ExtResource("2_shhme")
+texture_region_size = Vector2i(64, 64)
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_vbfun"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_bh37u")
+
+[node name="Board" type="Node2D" unique_id=1959753550]
+script = ExtResource("1_uh3b8")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=2036896027]
+tile_set = SubResource("TileSet_vbfun")
+rendering_quadrant_size = 64
+format = 2
+
+[node name="tileGenerator" type="Node2D" parent="." unique_id=1595420980]
+script = ExtResource("3_shhme")
+
+[node name="Grid" parent="." unique_id=1713911716 instance=ExtResource("4_s4i1f")]

@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var tile_map: TileMap = $TileMap
+@onready var grid: Node2D = $Grid
 
 var corner = Vector2i(3, 1) #top right
 var side = Vector2i(2, 1) #up
@@ -10,8 +11,20 @@ var flip_v := TileSetAtlasSource.TRANSFORM_FLIP_V
 var transpose := TileSetAtlasSource.TRANSFORM_TRANSPOSE
 
 func _ready():
-	build_walls(Global.size_board/2)
-
+	build_walls(Global.size_board)
+	grid.size_grid = Global.size_board.x-2
+	grid.position = Vector2i((grid.size_grid+4)*Global.tile_size/2, (grid.size_grid+4)*Global.tile_size/2)
+	print(grid.size_grid)
+func show_places(orientation:String):
+	for i in range(1, Global.size_board.x-2):
+		for j in range(1, Global.size_board.y-2):
+			var current_tile = Vector2i(i, j)
+			pass
+	match orientation:
+		"vertical":
+			pass
+		"horizontal":
+			pass
 
 func build_walls(size : Vector2i):
 	tile_map.clear()

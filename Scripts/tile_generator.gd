@@ -1,10 +1,10 @@
 extends Node2D
 
 const DIRECTIONS := {
-	"up": Vector2i(-Global.tile_size, 0),
-	"down": Vector2i(Global.tile_size, 0),
-	"left": Vector2i(0, -Global.tile_size),
-	"right": Vector2i(0, Global.tile_size)
+	"up": Vector2i.UP,
+	"down": Vector2i.DOWN,
+	"left": Vector2i.LEFT,
+	"right": Vector2i.RIGHT
 }
 
 var tile_positions : Array[Vector2i] = []
